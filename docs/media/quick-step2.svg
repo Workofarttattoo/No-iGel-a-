@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360">
+  <rect width="640" height="360" fill="#0f172a"/>
+  <rect x="40" y="40" width="560" height="280" rx="24" fill="#1e293b" stroke="#f97316" stroke-width="4"/>
+  <text x="60" y="110" font-family="Arial" font-size="32" fill="#f97316">Step 2 — Launch Mobile</text>
+  <text x="60" y="170" font-family="Arial" font-size="22" fill="#e2e8f0">1. cd mobile</text>
+  <text x="60" y="210" font-family="Arial" font-size="22" fill="#e2e8f0">2. npm install</text>
+  <text x="60" y="250" font-family="Arial" font-size="22" fill="#e2e8f0">3. npm start (press i or a)</text>
+</svg>
