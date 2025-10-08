@@ -1,0 +1,142 @@
+:root {
+  color-scheme: dark;
+  --bg: #04060b;
+  --panel: rgba(8, 18, 30, 0.72);
+  --accent: #66e2ff;
+  --accent-soft: rgba(102, 226, 255, 0.25);
+  --text: #e3f8ff;
+  --muted: #9ab7c6;
+  --warning: #f7a928;
+  --danger: #ff5f6d;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(20, 50, 75, 0.45), transparent 60%),
+    radial-gradient(circle at 80% 10%, rgba(38, 90, 140, 0.35), transparent 70%),
+    #02030a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.app-shell {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+  gap: 0;
+  backdrop-filter: blur(12px);
+}
+
+.viewer {
+  position: relative;
+  background: linear-gradient(135deg, rgba(8, 18, 30, 0.7), rgba(15, 30, 60, 0.65));
+}
+
+#noigela-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.console {
+  backdrop-filter: blur(18px);
+  background: var(--panel);
+  border-left: 1px solid var(--accent-soft);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: var(--text);
+}
+
+.console header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.console h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.status.connected {
+  color: var(--accent);
+}
+
+.status.warning {
+  color: var(--warning);
+}
+
+.status.danger {
+  color: var(--danger);
+}
+
+.transcript {
+  flex: 1;
+  border-radius: 16px;
+  border: 1px solid var(--accent-soft);
+  padding: 16px;
+  overflow-y: auto;
+  background: rgba(4, 10, 20, 0.6);
+  box-shadow: inset 0 0 35px rgba(12, 32, 55, 0.4);
+}
+
+.whisper {
+  margin: 0 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.whisper:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.whisper time {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.whisper p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.whisper .mood-celebrate {
+  color: #9affd0;
+}
+
+.whisper .mood-concern {
+  color: #ffc078;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(360px, 1fr) minmax(0, 1fr);
+  }
+  .console {
+    border-left: none;
+    border-top: 1px solid var(--accent-soft);
+  }
+}

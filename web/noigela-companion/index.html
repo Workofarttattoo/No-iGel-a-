@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>No'iGeL(a) Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewer">
+        <canvas id="noigela-canvas"></canvas>
+      </section>
+      <section class="console">
+        <header>
+          <h1>No'iGeL(a) Whisper Log</h1>
+          <p class="status" id="connection-status">disconnected</p>
+        </header>
+        <article class="transcript" id="whisper-feed"></article>
+      </section>
+    </main>
+    <script type="module" src="./noigela.js"></script>
+  </body>
+</html>

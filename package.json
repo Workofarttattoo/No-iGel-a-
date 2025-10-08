@@ -1,0 +1,20 @@
+{
+  "name": "gavl-visualizer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "boardroom": "node scripts/boardroom-simulator.js",
+    "boardroom:quantum": "node scripts/boardroom-simulator.js --quantum",
+    "multiverse": "node scripts/boardroom-multiverse.js",
+    "spike": "node spike/server.mjs",
+    "package:zip": "node scripts/package-release.mjs",
+    "test:smoke": "node tests/noigela-smoke.mjs",
+    "noigela": "node scripts/noigela-server.mjs"
+  },
+  "dependencies": {
+    "dockerode": "^4.0.8",
+    "@gavl/noigela": "file:../noigela-module"
+  }
+}
